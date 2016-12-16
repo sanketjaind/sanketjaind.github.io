@@ -12,6 +12,18 @@
     maxlength="10"
 >
 
+<input type="text" name="officerStartDate" id="officerStartDate" default="${officerStartDateVal}" captionid ="SIGNATURE_START_DATE" bundle="${SignatureLabels}" placeholder="yyyy-mm-dd" onkeyup="
+  						var date = this.value;
+  						if (date.match(/^\d{4}$/) !== null) {
+     						this.value = date + '-';
+  						} else if (date.match(/^\d{4}\-\d{2}$/) !== null) {
+     						this.value = date + '/';
+  						}else if (date.match(/^\d{4}\-\d{2}\:\d{2}$/) !== null) {
+     						this.value = date + ':';
+  						}
+  						" maxlength="16">
+  				  						
+
 <input
     type="text"
     name="date"
