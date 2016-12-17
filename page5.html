@@ -1,14 +1,17 @@
 <input
     type="text"
     name="date"
-    placeholder="yyyy/mm/dd:"
+    placeholder="yyyy/mm/dd"
     onkeyup="
         var v = this.value;
         if (v.match(/^\d{4}$/) !== null) {
             this.value = v + '/';
         } else if (v.match(/^\d{4}\/\d{2}$/) !== null) {
             this.value = v + '/';
-        }  
+        } else if (v.match(/^\d{4}\/\d{2}\/\d{2}$/) ! = null )
+        {
+             this.value = v + ':';
+        }
         
         "
     maxlength="20"
