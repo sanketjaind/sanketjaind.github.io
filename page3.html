@@ -2,8 +2,14 @@
 <html>
 <body>
 
-<iframe width="1080" height="720" src="https://www.youtube.com/">
-</iframe>
+SELECT 
+CASE
+WHEN TENEMENT_ID in (SELECT TENEMENT_NUMBER FROM PT_VALUATION_OWNER_DTLS_TXN) then 'Owner'
+WHEN TENEMENT_ID in (SELECT TENEMENT_NUMBER FROM PT_OCCUPIER_DTLS_TXN) then 'Occu'
+
+END
+AS Field
+FROM PT_VALUATION_TENEMENT_DTLS_TXN
 
 
 </body>
