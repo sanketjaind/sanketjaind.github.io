@@ -24,12 +24,9 @@ function add() {
     var para = document.createElement("P");
     var heading = document.getElementById("heading").value;
     var details = document.getElementById("details").value;
-    
-    alert(heading);
-    alert(details);
   
     var t = document.createTextNode(details);
     para.appendChild(t);
-    document.body.appendChild(para);
+    document.getElementById("add").appendChild(para);
 }
 </script>
