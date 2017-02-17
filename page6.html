@@ -4,13 +4,32 @@
 
 <form >
   Heading:<br>
-  <input type="text" name="heading" >
+  <input type="text" name="heading" id="heading">
   <br>
   Details:<br>
-  <input type="textbox" name="details" >
+  <input type="textbox" name="details" id="details">
   <br><br>
-  <input type="submit" value="Submit">
+  <button onclick="add()">Add</button>
 </form> 
 
-</body>
+  <div id = 'add'>
+      
+  </div>
+
+  </body>
 </html>
+
+<script>
+function add() {
+    var para = document.createElement("P");
+    var heading = document.getElementById("heading").value;
+    var details = document.getElementById("details").value;
+    
+    alert(heading);
+    alert(details);
+  
+    var t = document.createTextNode(details);
+    para.appendChild(t);
+    document.body.appendChild(para);
+}
+</script>
