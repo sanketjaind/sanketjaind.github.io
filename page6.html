@@ -12,19 +12,25 @@
 
 
   <div id = 'add'>
-      
+    
   </div>
 
   <script>
   
  function add() {
-    var para = document.createElement("P");
+    var heading = document.createElement("H1");
+    var para = document.createElement("P"); 
     var heading = document.getElementById("heading").value;
     var details = document.getElementById("details").value;
   
-    var t = document.createTextNode(details);
-    para.appendChild(t);
+    var h = document.createTextNode(heading);
+    heading.appendChild(h);
+    document.getElementById("add").appendChild(heading);
+   
+    var d = document.createTextNode(details);
+    para.appendChild(d);
     document.getElementById("add").appendChild(para);
+   
 }
     
 </script>
