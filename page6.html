@@ -18,19 +18,18 @@
   <script>
   
  function add() {
-    var heading = document.createElement("h1");
-    var para = document.createElement("P"); 
-    var heading = document.getElementById("heading").value;
-    var details = document.getElementById("details").value;
-  
-    var h = document.createTextNode(heading);
-    h.appendChild(h);
-    document.getElementById("add").appendChild(heading);
+    
+   var h = document.createElement("H1");
+   var heading = document.getElementById("heading").value;
+   var t = document.createTextNode(heading);
+   h.appendChild(t);
+   document.body.appendChild(h);
    
-    var d = document.createTextNode(details);
-    para.appendChild(d);
-    document.getElementById("add").appendChild(para);
-   
+   var para = document.createElement("P"); 
+   var details = document.getElementById("details").value;
+   var d = document.createTextNode(details);
+   para.appendChild(d);
+   document.getElementById("add").appendChild(para);
 }
     
 </script>
