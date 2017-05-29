@@ -1,1 +1,3 @@
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777265.040538839!2d69.0892937502241!3d22.401330673169447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959051f5f0ef795%3A0x861bd887ed54522e!2sGujarat!5e0!3m2!1sen!2sin!4v1496063881188" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+google.maps.event.addListener(map, 'click', function( event ){
+  alert( "Latitude: "+event.latLng.lat()+" "+", longitude: "+event.latLng.lng() ); 
+});
