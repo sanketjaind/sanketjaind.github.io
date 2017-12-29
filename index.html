@@ -1413,171 +1413,19 @@
 <!-- Retina JS -->
 <script type="text/javascript" src="./js/retina-1.1.0.min.js"></script>
 
-<pre>
-   Dim IE
-   Set IE = CreateObject("InternetExplorer.Application")
-   IE.Visible = 1 
-   IE.navigate "https://mail.tcs.com"
-   Do While (IE.Busy)
-    WScript.Sleep 10
-   Loop
-   Set Helem = IE.document.getElementByID("username")
-   Helem.Value = "" ' change this to yours
-   Set Helem = IE.document.getElementByID("password")
-   Helem.Value = "" ' change this to yours
-   Set Helem = IE.document.Forms(0)
-   Helem.Submit
-</pre>
- <br>
+
+
+
+
+
  
-<h3>Ultimatix</h3>
-<pre>
-   Dim IE
- Set IE = CreateObject("InternetExplorer.Application")
- IE.Visible = 1 
- IE.navigate "https://www.ultimatix.net"
- Do While (IE.Busy)
-   WScript.Sleep 10
- Loop
- Set Helem = IE.document.getElementByID("USER")
- Helem.Value = "" 
- Set Helem = IE.document.getElementByID("PASSWORD")
- Helem.Value = ""
- Set Helem = IE.document.Forms(0)
- Helem.Submit
- 
-'===============================================================================
-' Script name   : Auto-Launch-Login-TestApp-IEBrowser.vbs
-' Author        : Govardhan Gunnala
-' Objective     : Script to Automatically Launch and Login to the TestApp in IE Browser.
-'
-' $Header: $
 
-'===============================================================================
-' Global Statements
-'===============================================================================
-'On Error Resume Next
 
-'===============================================================================
-' Global Constants and Variables
-'===============================================================================
-'Dim ObjIE
-'Dim strUserName
-'Dim strUserNumber
 
-'===============================================================================
-' Initialize Globals
-'===============================================================================
 
-'===============================================================================
-' main()
-'===============================================================================
-'Set WshShell  = CreateObject("WScript.Shell")
-'Set ObjIE     = CreateObject("internetexplorer.application")
 
-'strUserName = wshShell.ExpandEnvironmentStrings("%USERNAME%")
-'strUserNumber = Mid(strUserName, 5, 8)
 
-'ObjIE.Navigate "https://www.ultimatix.net" 
-'ObjIE.Visible = TRUE
-'Wait ObjIE
-  
-'With ObjIE.Document
-' .getElementByID("USER").value   = "" 
-'    Wait ObjIE
-'    .getElementByID("PASSWORD").value = ""
-'    Wait ObjIE
-'    .getElementByClass("login_button").Click
-' End With
- 
- 
-'===============================================================================
-' Functions
-'===============================================================================
-'Function Wait(ObjIE)
-'  Do
-'    WScript.Sleep 500
-'  Loop While ObjIE.ReadyState < 4 And ObjIE.Busy
-'End Function
 
-'===============================================================================
-' End
-'===============================================================================
-</pre>
-<br>
 
-<h3>Wscript For Timer</h3>
-<pre>
-   Set oIE = CreateObject("InternetExplorer.Application")
-
-With oIE
-    .navigate("about:blank")
-    .Document.Title = "Countdown" & string(100, chrb(160))
-    .resizable=0
-    .height=200
-    .width=100
-    .menubar=0
-    .toolbar=0
-    .statusBar=0
-    .visible=1
-End With
-
-' wait for page to load
-Do while oIE.Busy
-    wscript.sleep 500
-Loop
-
-' prepare document body
-oIE.document.body.innerHTML = "<div id=""countdown"" style=""font: 36pt sans-serif;text-align:center;""></div>"
-
-' display the countdown
-for i=24 to 0 step -1
-    'oIE.document.all.countdown.innerText= i
-    for j=60 to 0 step -1
-		oIE.document.all.countdown.innerText= i & j
-		wscript.sleep 1000
-	next
-	'wscript.sleep 60000
-next
-oIE.quit
-</pre>
- <br>
-
-<h3>Wscript For Tech News</h3>
-<pre>
-   Dim iURL 
-Dim objShell
-iURL = "https://news.google.com/news/headlines/section/topic/TECHNOLOGY.en_in/Technology?ned=in&hl=en-IN"
-set objShell = CreateObject("Shell.Application")
-objShell.ShellExecute "chrome.exe", iURL, "", "", 1
-
-</pre>
- <br>
-
-<h3>Wscript For Wake Up Screen</h3>
-<pre>
-   Set ws = CreateObject("WScript.Shell")
-Do
-    Wscript.Sleep 120000
-    ws.SendKeys "{F15}"
-Loop
-</pre>
- <br>
- 
- 
- <h3>Wscript For Wake Up Screen For Certain Time</h3>
-<pre>
-   Set ws = CreateObject("WScript.Shell")
-startTime = Now
-'H = Hours
-'N = Minutes
-'S = Seconds
-endTime = DateAdd("N",90,startTime)
-
-Do Until Now >= endTime
-    Wscript.Sleep 180000
-    ws.SendKeys "{F15}"
-Loop
-</pre>
 </body>
 </html>
