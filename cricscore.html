@@ -111,7 +111,8 @@
 
     <script>
         function fetchScore() {
-            fetch('https://www.cricbuzz.com/api/cricket-match/commentary/112469')
+            //fetch('https://www.cricbuzz.com/api/cricket-match/commentary/112469')
+            fetch('')
                 .then(response => response.json())
                 .then(data => {
                     updateScore(data);
@@ -139,8 +140,8 @@
             }
         }
 
-        fetchScore();
-        setInterval(fetchScore, 30000);
+        //fetchScore();
+        //setInterval(fetchScore, 30000);
     </script>
 </body>
 </html>
